@@ -1,0 +1,52 @@
+﻿<Window x:Class="Müsteri_Aktarımı.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Müşteri Aktarım" Height="746.435" Width="888.306" WindowStartupLocation="CenterScreen"
+        WindowStyle="ThreeDBorderWindow">
+    <Grid Margin="0,0,28.6,33.8">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="195*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="İŞLEMLER" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,6.8,0,0" Grid.Row="1" Height="249" Width="374">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Pan Servis Linki:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="textBoxPanServisLink" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+                <Label Content="Pan Servis Şifresi:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="textBoxPanServisSifresi" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+                <Label Content="Dist:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="textBoxDist" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+                <Label Content="Firma Kodu:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="textBoxFirmaKodu" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+                <Label Content="Çalışma Yılı:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="textBoxCalismaYili" Grid.Row="4" Grid.Column="1" Margin="5"/>
+
+                <Button x:Name="ExcelYukleButton" Content="Excel Yükle" Grid.Row="5" Grid.Column="0" Margin="5" Width="120" Click="ExcelYukleButton_Click"/>
+                <Button Content="Aktarımı Başlat" Grid.Row="5" Grid.Column="1" Margin="5" Width="120" Click="AktarimiBaslatButton_Click"/>
+
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="VERİLER" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,246.7,0,0" Grid.Row="1">
+            <DataGrid x:Name="dataGridView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,-620,0" Height="406"/>
+        </GroupBox>
+    </Grid>
+</Window>
